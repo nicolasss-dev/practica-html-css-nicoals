@@ -118,8 +118,20 @@ nav .nav-link {
 
 /* album de fotos */
 
-.album {
+.album-grid {
     background-color: var(--snk-grey);
+}
+
+.album-tittle {
+    display: flex;
+    justify-content: center; 
+    padding-top: 1rem;
+}
+
+.album-tittle h1 {
+    font-family:'Courier New', Courier, monospace;
+}
+.album {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 1fr;  
@@ -139,10 +151,11 @@ nav .nav-link {
     /* width: fit-content; */
 }
 
+
 .album-photos img {
     width: 100%;
     min-height: 100%;
-
+    
 }
 
 .album-photos:first-child {
@@ -151,7 +164,7 @@ nav .nav-link {
 }
 
 .album > :first-child + .album-photos {
-    transform: translateY(0.5rem);
+    transform: translateY(0.5rem);   
 }
 
 .album-photos:last-child {
