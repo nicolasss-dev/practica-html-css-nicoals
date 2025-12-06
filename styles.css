@@ -1,0 +1,160 @@
+/* Fuentes */
+@font-face {
+    font-family: 'Chinese Rocks Shaded';
+    src: url('assets/fonts/ChineseRocksShadedRegular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+/* Estilos globales */
+:root {
+    /* Fuentes */
+    --font-titulos: 'Chinese Rocks Shaded', Impact, Arial Black, sans-serif;
+    --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    
+    /* Tamaños opcionales */
+    --font-size-titulo-principal: clamp(2.65rem, 6vw, 4rem);
+    --font-size-subtitulo: 1.5rem;
+
+  /* Paleta Mikasa */
+    --snk-dark: #393C41;
+    --snk-grey: #A99C91;
+    --snk-paper: #F8DFBF;
+    --snk-gold: #CAA674;
+    --snk-red: #832D38;
+    
+    /* Utilidades */
+    --manga-ink: #0d0d0d;
+    --manga-bg: rgb(227, 227, 227);
+}
+
+body {
+    font-family: var(--font-body);
+}
+
+img,
+svg,
+picture {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+/* Nav var */
+nav {
+    background: var(--snk-dark);
+    display: flex;
+    justify-content: center;
+}
+
+nav .nav-link {
+    text-decoration: none;
+    margin:0.5rem;
+    padding: 0.5rem;
+    color: var(--snk-paper);
+    background: var(--snk-red);
+    border: 3px solid var(--manga-ink);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Hero section */
+.hero-section {
+    background: var(--manga-bg);
+    height: 100vh;
+    /* border: 10px solid var(--manga-ink); */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 1.5rem;
+    box-sizing: content-box;
+}
+
+.tittle {
+    font-family: var(--font-titulos);
+    font-size: clamp(2.65rem, 10vw, 10rem);
+    font-weight: 700;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.subtittle {
+    font-size: 1.5rem;
+    font-family: var();
+}
+
+.hero-info {
+    margin: 0 2rem;
+    align-content: center;
+}
+
+.container-hero-image {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image {
+    height: 100vh;
+    filter: drop-shadow(3px 0 0 #fff)
+            drop-shadow(-3px 0 0 #ffffff) 
+            drop-shadow(0 3px 0 #fff) 
+            drop-shadow(0 -px 0 #fff);
+}
+
+/* album de fotos */
+
+.album {
+    background-color: var(--snk-grey);
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;  
+    /* grid-template-columns: repeat(auto-fill, 1fr);
+    grid-template-rows: 1fr; */
+    gap: -20px;
+    padding: 1rem 3rem;
+}
+
+.album-photos {
+    margin: 1.5rem 0;
+    border: var(--manga-ink) solid 3px;
+    border-radius: 3px;
+    outline: #fff solid 10px;
+    max-height: 500px;
+    overflow: hidden;
+    /* width: fit-content; */
+}
+
+.album-photos img {
+    width: 100%;
+    min-height: 100%;
+
+}
+
+.album-photos:first-child {
+    rotate: -2deg;
+    /* margin-left: 1.5rem; */
+}
+
+.album > :first-child + .album-photos {
+    transform: translateY(0.5rem);
+}
+
+.album-photos:last-child {
+    rotate: 2deg;
+    /* margin-right: 1.5rem; */
+}
