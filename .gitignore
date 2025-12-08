@@ -1,0 +1,25 @@
+# Archivos de documentacion y analisis (no necesarios en produccion)
+README.md
+index_anotado.html
+styles_anotado.css
+
+# Nota: src/ contiene la version mejorada del proyecto
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores e IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependencias (si agregas Node.js en el futuro)
+node_modules/
